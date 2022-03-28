@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.content {
+  @apply max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-6 md:py-12;
+}
+
+.grid-background {
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, rgb(151, 33, 33) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(151, 33, 33) 1px, transparent 1px);
+}
+
+.stack {
+    box-shadow: 20px 20px 0 -1px #fff, 20px 20px 0 #191a1b, 40px 40px 0 -1px #fff, 40px 40px 0 #191a1b;
+}
