@@ -1,9 +1,11 @@
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from './components/Home'
+
 const App = () => {
-  return (
-    <div className="App">
-      <h1 className="text-7xl">test</h1>
-    </div>
-  );
+  return <Routes>
+    <Route path='/' element={<Home />}></Route>
+
+  </Routes>
 }
 
-export default App;
+export default App
