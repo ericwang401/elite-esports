@@ -1,6 +1,4 @@
-import React from 'react';
-
-function App() {
+const App = () => {
   return (
     <div className="App">
       <h1 className="text-7xl">test</h1>
