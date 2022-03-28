@@ -4,10 +4,10 @@ const Home = () => {
   return (
     <>
       <div className='bg-[#ce0037] grid-background relative'>
-        <div className='grid grid-cols-2 content h-[70vh] pt-20 sm:pt-24 lg:pt-48'>
+        <div className='lg:grid lg:grid-cols-2 content h-[100vh] lg:h-[80vh] pt-20 sm:pt-24 lg:pt-48'>
           <div>
             <h3 className='text-xl font-medium text-white'>Elite Esports</h3>
-            <h1 className='text-7xl font-bold text-white uppercase'>
+            <h1 className='text-5xl md:text-7xl font-bold text-white uppercase'>
               THE
               <br />
               HOME OF
@@ -15,7 +15,7 @@ const Home = () => {
               CHAMPIONS
             </h1>
           </div>
-          <div>
+          <div className='pr-20 mt-8 lg:mt-0 lg:pr-0'>
             <div className="stack w-full bg-black rounded-sm">
                 <video src={video} className="w-full" autoPlay muted loop></video>
             </div>
