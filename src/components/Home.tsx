@@ -28,7 +28,7 @@ const Home = () => {
               <div className="rounded-t-xl overflow-hidden">
                 <video src={video} className='w-full' autoPlay muted loop></video>
               </div>
-              <div className='bg-slate-900 text-slate-500 rounded-b-xl flex items-center'>
+              <div className='bg-neutral-900 text-neutral-500 rounded-b-xl flex items-center'>
                 <div className='flex-auto flex items-center justify-evenly'>
                   <button
                     type='button'
@@ -74,7 +74,7 @@ const Home = () => {
                 </div>
                 <button
                   type='button'
-                  className='bg-slate-800 text-slate-300 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-slate-900/5 shadow-md flex items-center justify-center'
+                  className='bg-neutral-800 text-neutral-300 flex-none -my-2 mx-auto w-20 h-20 rounded-full ring-1 ring-neutral-900/5 shadow-md flex items-center justify-center'
                   aria-label='Pause'
                 >
                   <svg width='30' height='32' fill='currentColor'>
@@ -172,8 +172,7 @@ const Home = () => {
             <p className='mt-8 text-neutral-400'>
               We bring together millions of passionate gamers globally to
               compete in a variety of games from League of Legends, Valorant,
-              Counterstrike, Rocket League, Overwatch, and more. Elite Esport's
-              global presence empowers
+              Counterstrike, Rocket League, Overwatch, and more.
             </p>
           </div>
         </div>
