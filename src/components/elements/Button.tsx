@@ -35,7 +35,7 @@ const ButtonStyle = styled.button<ButtonProps>`
             background-color: #262626;
             border-color: #262626;
         }
-        ${tw`border-2 hover:text-white`}
+        ${tw`border-2 hover:text-white active:text-white`}
     `}
 
     ${({light}) => light && css`${tw`text-white`}`}
