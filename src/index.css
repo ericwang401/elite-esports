@@ -11,7 +11,3 @@
   background-image: linear-gradient(to right, rgb(151, 33, 33) 1px, transparent 1px),
     linear-gradient(to bottom, rgb(151, 33, 33) 1px, transparent 1px);
 }
-
-.stack {
-    box-shadow: 20px 20px 0 -1px #fff, 20px 20px 0 #191a1b, 40px 40px 0 -1px #fff, 40px 40px 0 #191a1b;
-}

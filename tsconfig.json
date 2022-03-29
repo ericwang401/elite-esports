@@ -21,7 +21,8 @@
     "jsx": "react-jsx",
     "baseUrl": "./",
     "types": [
-      "node"
+      "node",
+      "@types/styled-components"
     ],
     "paths": {
       "@/*": ["src/*"]
