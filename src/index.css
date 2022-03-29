@@ -2,12 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body {
+  @apply bg-neutral-900;
+}
+
 .content {
-  @apply max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-6 md:py-12;
+  @apply max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 py-6 md:py-20;
 }
 
 .grid-background {
   background-size: 40px 40px;
   background-image: linear-gradient(to right, rgb(151, 33, 33) 1px, transparent 1px),
     linear-gradient(to bottom, rgb(151, 33, 33) 1px, transparent 1px);
+}
+
+.text-outlined-muted {
+  -webkit-text-fill-color: #171717;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #737373;
 }
