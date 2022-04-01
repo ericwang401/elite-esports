@@ -19,6 +19,11 @@ const Home = () => {
       subtitle: 'Won $10,000 USD',
       text: "I can't believe my eyes when my team won. I finally have enough money to travel around the world, and I'm looking forward to the next tournament!",
     },
+    {
+      name: 'Wilkerson Schultz',
+      subtitle: 'Won $0 USD',
+      text: "wow!!!11! #@*(!&#!()@*&#! @!#**) you !@#)( you !@#()*!@# you ",
+    },
   ]
   return (
     <>
