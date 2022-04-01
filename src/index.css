@@ -21,3 +21,24 @@ html, body {
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #737373;
 }
+
+.stack-2 {
+  box-shadow: 20px 20px 0 -1px #fff, 20px 20px 0 #191a1b, 40px 40px 0 -1px #fff, 40px 40px 0 #191a1b;
+}
+
+.stack-1 {
+  box-shadow: 10px 10px 0 -1px rgb(23 23 23), 10px 10px 0 rgb(38 38 38);
+}
+
+.shadow-md {
+  box-shadow: var(--tw-ring-offset-shadow,0 0 #000),var(--tw-ring-shadow,0 0 #000),var(--tw-shadow) !important;
+}
+
+.shadow-md {
+  --tw-shadow: 3px 3px 0 rgb(38 38 38) !important;
+  --tw-shadow-colored: 3px 3px 0 var(--tw-shadow-color)!important;
+}
+
+.testimonial-card {
+  @apply flex flex-col justify-between stack-1 rounded-sm bg-neutral-800 text-white p-4
+}

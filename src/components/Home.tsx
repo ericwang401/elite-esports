@@ -1,7 +1,25 @@
 import video from '@/assets/videos/header-landing.mp4'
 import Button from '@/components/elements/Button'
 
+import leagueLogo from '@/assets/images/league-logo.png'
+import valorantLogo from '@/assets/images/valorant-logo.png'
+import rocketLogo from '@/assets/images/rocket-logo.png'
+import csgoLogo from '@/assets/images/csgo-logo.png'
+import { arrayBuffer } from 'stream/consumers'
+
 const Home = () => {
+  const winnersTestimonials = [
+    {
+      name: 'Albert Sheng',
+      subtitle: 'Won a Gaming PC',
+      text: "As a new creator, winning a new computer from Elite Esports has helped me achieve my dreams. I can record and edit high-quality videos. Definitely can't wait to compete again.",
+    },
+    {
+      name: 'Cody Moss',
+      subtitle: 'Won $10,000 USD',
+      text: "I can't believe my eyes when my team won. I finally have enough money to travel around the world, and I'm looking forward to the next tournament!",
+    },
+  ]
   return (
     <>
       <div className='bg-[#ce0037] grid-background relative'>
@@ -25,8 +43,14 @@ const Home = () => {
           </div>
           <div className='mt-8 lg:mt-0 lg:pr-0'>
             <div className='w-full'>
-              <div className="rounded-t-xl overflow-hidden">
-                <video src={video} className='w-full' autoPlay muted loop></video>
+              <div className='rounded-t-xl overflow-hidden'>
+                <video
+                  src={video}
+                  className='w-full'
+                  autoPlay
+                  muted
+                  loop
+                ></video>
               </div>
               <div className='bg-neutral-900 text-neutral-500 rounded-b-xl flex items-center'>
                 <div className='flex-auto flex items-center justify-evenly'>
@@ -160,21 +184,95 @@ const Home = () => {
           </svg>
         </div>
       </div>
-      <div className='bg-neutral-900'>
-        <div className='lg:grid lg:grid-cols-2 content h-screen relative'>
-          <div>
-            <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
-              Elite Esports //
-            </p>
-            <h1 className='relative text-4xl font-bold text-white'>
-              We Are Elite Esports
-            </h1>
-            <p className='mt-8 text-neutral-400'>
-              We bring together millions of passionate gamers globally to
-              compete in a variety of games from League of Legends, Valorant,
-              Counterstrike, Rocket League, Overwatch, and more.
-            </p>
+      <div className='lg:grid lg:grid-cols-2 content relative'>
+        <div>
+          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+            Elite Esports //
+          </p>
+          <h1 className='relative text-4xl font-bold text-white'>
+            We Are Elite Esports
+          </h1>
+          <p className='mt-8 text-neutral-400'>
+            We bring together millions of passionate gamers globally to compete
+            in a variety of games from League of Legends, Valorant,
+            Counterstrike, Rocket League, and more. Gamers have the opportunity
+            to utilize their skills and display complex teamwork and leadership.
+          </p>
+          <div className='grid grid-cols-2 mt-8 gap-4 sm:pr-32'>
+            <div className='rounded-sm grid place-items-center p-4 bg-neutral-800'>
+              <img
+                src={leagueLogo}
+                alt='League of Legends logo'
+                className='w-full'
+              />
+            </div>
+            <div className='rounded-sm grid place-items-center p-4 bg-neutral-800'>
+              <img
+                src={rocketLogo}
+                alt='Rocket League logo'
+                className='w-full'
+              />
+            </div>
+            <div className='rounded-sm grid place-items-center p-4 bg-neutral-800'>
+              <img src={valorantLogo} alt='Valorant logo' className='w-full' />
+            </div>
+            <div className='rounded-sm grid place-items-center p-4 bg-neutral-800'>
+              <img
+                src={csgoLogo}
+                alt='CSGO logo'
+                className='brightness-0 invert w-full'
+              />
+            </div>
           </div>
+        </div>
+        <div></div>
+      </div>
+
+      <div className='lg:grid lg:grid-cols-2 content'>
+        <div>
+          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+            Fair //
+          </p>
+          <h1 className='relative text-4xl font-bold text-white'>
+            Adaptive And Competitive Bracket System
+          </h1>
+        </div>
+      </div>
+      <div className='content'>
+        <div>
+          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+            Rewarding //
+          </p>
+          <h1 className='relative text-4xl font-bold text-white'>
+            We Give Out Real Prizes
+          </h1>
+          <p className='mt-8 text-neutral-400'>
+            A tournament isn't one without its prizes. That's why we partnered
+            with dozens of companies to bring you an opportunity to win cash
+            prizes and gifts valued up to $20,000 USD. Check out what our
+            winners say.
+          </p>
+          <div className='grid grid-cols-4 gap-4'>
+            {winnersTestimonials.map((testimonial) => (
+              <div className='testimonial-card'>
+                <p>{testimonial.text}</p>
+                <div>
+                  <p className='mt-6 font-bold'>{testimonial.name}</p>
+                  <p>{testimonial.subtitle}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      <div className='lg:grid lg:grid-cols-2 content'>
+        <div>
+          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+            Community //
+          </p>
+          <h1 className='relative text-4xl font-bold text-white'>
+            Play With Popular Teams And Hundreds of Content Creators
+          </h1>
         </div>
       </div>
     </>
