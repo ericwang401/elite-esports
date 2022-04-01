@@ -275,6 +275,26 @@ const Home = () => {
           </h1>
         </div>
       </div>
+      <div className='lg:grid lg:grid-cols-2 content'>
+        <div>
+          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+            News //
+          </p>
+          <h1 className='relative text-4xl font-bold text-white'>
+            News & Updates
+          </h1>
+        </div>
+      </div>
+      <div className='lg:grid lg:grid-cols-2 content'>
+        <div>
+          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+            News //
+          </p>
+          <h1 className='relative text-4xl font-bold text-white'>
+            Register. Play. Win. Sleep. Repeat.
+          </h1>
+        </div>
+      </div>
     </>
   )
 }
