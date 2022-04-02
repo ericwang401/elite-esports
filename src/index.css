@@ -3,11 +3,11 @@
 @tailwind utilities;
 
 html, body {
-  @apply bg-neutral-900 overflow-x-hidden w-full;
+  @apply bg-neutral-900 overflow-x-hidden w-full relative;
 }
 
 #root {
-  @apply overflow-x-hidden w-full
+  @apply overflow-x-hidden w-full relative;
 }
 
 
