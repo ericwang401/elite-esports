@@ -10,6 +10,7 @@ const Sources = () => {
 
   const documents = [
     'https://drive.google.com/file/d/1SGcdn0igU3i-_vJnjo9SwhkGeQr-rwtZ/view?usp=sharing',
+    'https://drive.google.com/file/d/1Uvh30BTcy1ylu1SUSMuAWZ8ZSF0ij6zo/view?usp=sharing',
     'https://drive.google.com/file/d/1Uvh30BTcy1ylu1SUSMuAWZ8ZSF0ij6zo/view?usp=sharing'
   ]
   return (
