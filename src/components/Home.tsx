@@ -18,6 +18,8 @@ import spicalol from '@/assets/images/spicalol.gif'
 
 import eyes from '@/assets/images/eyes.png'
 
+import { useRef, useState } from 'react'
+
 const Home = () => {
   /*
   const vidRef = useRef(null)
@@ -28,6 +30,16 @@ const Home = () => {
       vidRef?.current.stop()
     }
   } */
+
+  const registerRef = useRef<HTMLDivElement>(null)
+
+  const [newsVisible, setNewsVisible] = useState(false)
+  const [newsContent, setNewsContent] = useState({
+    title: '',
+    date: '',
+    image: '',
+    content: '',
+  })
 
   const brands = [
     fifaLogo,
@@ -67,18 +79,27 @@ const Home = () => {
       date: '02/17/22',
       image:
         'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg',
+      content: `Apex Legends is a NEW battle royale coming your way. Developed by
+      Respawn Entertainment, It brings a variety of heroes to battle with
+      on the map. 60 players are dropped from a plane to fight to become
+      the Champions of the Arena. Choosing from an arsenal of weapons, the
+      first person shooting in Apex Legends is something never seen
+      before.`,
     },
     {
       title: 'February Tournament Cancelled',
       date: '02/03/22',
       image:
         'https://images.pond5.com/red-cancelled-stamp-animation-black-footage-136500183_iconl.jpeg',
+      content: `The elite esports season was off to a great start in early February. But then on February 17th Red Bull annual tournament disaster struck.  An unnamed hacker who called himself Бб76vV# hijacked the tournament and stopped all servers! The hacker asked for a ransom of $3000 for the servers to be back up again, the ransom went unpaid and the tournament was cancelled. Investigations are underway to find the hacker's identity but so far nothing has been found.
+        `,
     },
     {
       title: '2022 Rosters Available',
       date: '01/25/22',
       image:
         'https://images.unsplash.com/photo-1624295059100-0ca889087b54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
+      content: `The elite esports team is very exclusive in how it picks its members. All members need to be top 30% in their game's competitive ranking. If a member is top 30% they have to pass an extensive skills test. After the skills test they are interviewed and tested for team compatibility. If they meet all these requirements they have to compete against the other hundreds of candidates for the coveted esports spot. Using this method, we have finalized the rosters for the 2022 year. Information regarding teams are available under registration on the home page.`,
     },
   ]
 
@@ -99,8 +120,15 @@ const Home = () => {
               Competitive Esport Tournaments
             </h3>
             <div className='flex space-x-2 mt-10'>
-              <Button secondary>Register</Button>
-              <Button outlined>Tournament Info</Button>
+              <Button
+                secondary
+                onClick={() =>
+                  registerRef.current &&
+                  registerRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
+                Register
+              </Button>
             </div>
           </div>
           <div className='mt-8 lg:mt-0 lg:pr-0'>
@@ -339,7 +367,7 @@ const Home = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8'>
             {winnersTestimonials.map((testimonial) => (
               <div className='testimonial-card'>
-                <p>{testimonial.text}</p>
+                <p className=''>{testimonial.text}</p>
                 <div>
                   <p className='mt-6 font-bold'>{testimonial.name}</p>
                   <p>{testimonial.subtitle}</p>
@@ -379,7 +407,15 @@ const Home = () => {
               Join today to experience it yourself!
             </p>
             <div className='mt-8'>
-              <Button secondary>Play Now</Button>
+              <Button
+                secondary
+                onClick={() =>
+                  registerRef.current &&
+                  registerRef.current.scrollIntoView({ behavior: 'smooth' })
+                }
+              >
+                Play Now
+              </Button>
             </div>
           </div>
           <div className='relative w-full h-[30rem]'>
@@ -407,7 +443,13 @@ const Home = () => {
         </h1>
         <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8'>
           {news.map((news) => (
-            <div className='news-card'>
+            <div
+              className='news-card'
+              onClick={() => {
+                setNewsVisible(true)
+                setNewsContent(news)
+              }}
+            >
               <picture className='w-full h-auto'>
                 <img
                   src={news.image}
@@ -423,7 +465,7 @@ const Home = () => {
           ))}
         </div>
       </div>
-      <div className='lg:grid lg:grid-cols-2 content'>
+      <div className='lg:grid lg:grid-cols-2 content gap-8' ref={registerRef}>
         <div>
           <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
             Join Us //
@@ -432,8 +474,59 @@ const Home = () => {
             Register. <br /> Play.
             <br /> Win. <br /> Repeat.
           </h1>
+          <p className='mt-8 text-neutral-400'>
+            The BOOM Invitational Tournament starts on May 21th at 1 PM EST.
+            Participants must be in the official tournament discord
+            https://discord.gg/FWGEX2b8. This tournament is 16 teams in a single
+            elimination bracket. Every series is Best of 1, except the Grand
+            Final which is Best of 3. The Grand Final should commence at 5 PM
+            EST and be completed by 7:30 PM EST.
+          </p>
+
+          <Button
+            className='mt-8'
+            onClick={() =>
+              window.location.replace('https://discord.gg/FWGEX2b8')
+            }
+          >
+            Register Now
+          </Button>
+        </div>
+        <div className='flex space-y-8 flex-col w-full'>
+          <a href='https://discord.gg/FWGEX2b8'>
+            <div className='w-full p-8 stack-1 rounded-sm bg-neutral-800'>
+              <h3 className='text-4xl text-white font-bold'>
+                Discord Community
+              </h3>
+              <p className='text-neutral-400 mt-8'>
+                Click the link below to join the community and register for the
+                upcoming tournaments. <br /> https://discord.gg/FWGEX2b8
+              </p>
+            </div>
+          </a>
+          <div className='w-full p-8 stack-1 rounded-sm bg-neutral-800'>
+            <h3 className='text-4xl text-white font-bold'>Schedule</h3>
+            <p className='text-neutral-400 mt-8'>
+              Starts: May 21th at 1 PM EST <br /> Finishes: 7:30 PM EST
+            </p>
+          </div>
         </div>
       </div>
+
+      {newsVisible && (
+        <div className='fixed inset-0 grid place-items-center z-40'>
+          <div className='absolute w-full h-full bg-neutral-900/50'></div>
+          <div className='bg-neutral-800 max-w-2xl rounded-sm p-8 z-50'>
+            <h3 className='text-4xl text-white font-bold'>
+              {newsContent.title}
+            </h3>
+            <p className='text-neutral-400 mt-8'>{newsContent.content}</p>
+            <div className='flex justify-end mt-8'>
+              <Button onClick={() => setNewsVisible(false)}>Close</Button>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   )
 }
