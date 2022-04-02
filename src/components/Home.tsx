@@ -350,8 +350,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='content'>
-        <div>
+      <div className='content relative'>
           <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
             Rewarding //
           </p>
@@ -390,7 +389,6 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </div>
       <div className='relative'>
         <div className='absolute h-full w-full grid-background bg-[#ce0037] transform skew-y-6' />
         <div className='lg:grid lg:grid-cols-2 content gap-8'>
