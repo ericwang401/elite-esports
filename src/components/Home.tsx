@@ -508,6 +508,14 @@ const Home = () => {
               Starts: May 21th at 1 PM EST <br /> Finishes: 7:30 PM EST
             </p>
           </div>
+          <div className='w-full p-8 stack-1 rounded-sm bg-neutral-800'>
+            <h3 className='text-4xl text-white font-bold'>Have Questions?</h3>
+            <p className='text-neutral-400 mt-8'>
+              Contact us at <a href="mailto:elitesports@performave.com" className='font-bold text-white'>elitesports@performave.com</a>
+              <br />
+              We are available 24/7 across the globe.
+            </p>
+          </div>
         </div>
       </div>
 

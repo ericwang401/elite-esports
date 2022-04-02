@@ -6,7 +6,7 @@ const App = () => {
   return (
     <>
       <div className='fixed w-full z-50 bg-neutral-900'>
-        <div className='max-w-7xl mx-auto px-2 sm:px-6 text-white py-4'>
+        <div className='max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 text-white py-4'>
           <a href="/"><h3 className='text-lg font-bold'>Elite Esports</h3></a>
         </div>
       </div>
