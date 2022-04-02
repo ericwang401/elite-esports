@@ -59,6 +59,25 @@ const Home = () => {
     },
   ]
 
+  const news = [
+    {
+      title: 'Introducing Apex Legends',
+      date: '02/17/22',
+      image:
+        'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/capsule_616x353.jpg',
+    },
+    {
+      title: 'February Tournament Cancelled',
+      date: '02/03/22',
+      image: 'https://images.pond5.com/red-cancelled-stamp-animation-black-footage-136500183_iconl.jpeg',
+    },
+    {
+      title: '2022 Rosters Available',
+      date: '01/25/22',
+      image: 'https://images.unsplash.com/photo-1624295059100-0ca889087b54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+    },
+  ]
+
   return (
     <>
       <div className='bg-[#ce0037] grid-background relative'>
@@ -267,15 +286,20 @@ const Home = () => {
         <div></div>
       </div>
 
-      <div className='lg:grid lg:grid-cols-2 content'>
-        <div>
-          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
-            Fair //
-          </p>
-          <h1 className='relative text-4xl font-bold text-white'>
-            Adaptive And Competitive Bracket System
-          </h1>
-        </div>
+      <div className='content'>
+        <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+          Fair //
+        </p>
+        <h1 className='relative text-4xl font-bold text-white'>
+          Adaptive And Competitive Bracket System
+        </h1>
+        <p className='mt-8 text-neutral-400'>
+          Our tournament brackets are always verified to be easy to use on every
+          platform, from mobile devices to television screens. Up to 128 teams
+          are allowed to be viewed on an event. Each stage gives you the most
+          important information, such as score, date, and available VODs. All
+          prize pools and teams are listed below.
+        </p>
       </div>
       <div className='content'>
         <div>
@@ -291,7 +315,7 @@ const Home = () => {
             prizes and gifts valued up to $20,000 USD. Check out what our
             winners say.
           </p>
-          <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-8'>
+          <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8'>
             {winnersTestimonials.map((testimonial) => (
               <div className='testimonial-card'>
                 <p>{testimonial.text}</p>
@@ -350,23 +374,38 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='lg:grid lg:grid-cols-2 content'>
-        <div>
-          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
-            News //
-          </p>
-          <h1 className='relative text-4xl font-bold text-white'>
-            News & Updates
-          </h1>
+      <div className='content'>
+        <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+          News //
+        </p>
+        <h1 className='relative text-4xl font-bold text-white'>
+          News & Updates
+        </h1>
+        <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8'>
+          {news.map((news) => (
+            <div className='news-card'>
+              <picture className='w-full h-auto'>
+                <img
+                  src={news.image}
+                  className='object-cover object-center aspect-video'
+                  alt='Article'
+                />
+              </picture>
+              <div className='p-4'>
+                <p className='text-xs mt-3'>{news.date}</p>
+                <h3 className='text-xl mt-3 font-bold'>{news.title}</h3>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <div className='lg:grid lg:grid-cols-2 content'>
         <div>
           <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
-            News //
+            Join Us //
           </p>
-          <h1 className='relative text-4xl font-bold text-white'>
-            Register. Play. Win. Sleep. Repeat.
+          <h1 className='relative text-7xl font-bold text-white'>
+            Register. <br /> Play.<br /> Win. <br /> Repeat.
           </h1>
         </div>
       </div>

@@ -51,3 +51,7 @@ html, body {
 .creator-card {
   @apply rounded-sm overflow-hidden absolute stack-1
 }
+
+.news-card {
+  @apply flex flex-col stack-1 rounded-sm bg-neutral-800 text-white overflow-hidden
+}
