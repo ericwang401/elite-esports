@@ -512,7 +512,7 @@ const Home = () => {
       </div>
 
       {newsVisible && (
-        <div className='fixed inset-0 grid place-items-center z-40'>
+        <div className='fixed inset-0 grid place-items-center z-40 p-5'>
           <div className='absolute w-full h-full bg-neutral-900/50'></div>
           <div className='bg-neutral-800 max-w-2xl rounded-sm p-8 z-50'>
             <h3 className='text-4xl text-white font-bold'>
