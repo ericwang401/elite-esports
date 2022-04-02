@@ -13,6 +13,9 @@ import attLogo from '@/assets/images/att-logo.svg'
 import johnLogo from '@/assets/images/john-logo.svg'
 import microsoftLogo from '@/assets/images/microsoft-logo.svg'
 
+import c9keeoh from '@/assets/images/c9keeoh.gif'
+import spicalol from '@/assets/images/spicalol.gif'
+
 const Home = () => {
   /*
   const vidRef = useRef(null)
@@ -315,7 +318,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='lg:grid lg:grid-cols-2 content'>
+      <div className='lg:grid lg:grid-cols-2 content gap-8'>
         <div>
           <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
             Community //
@@ -328,9 +331,22 @@ const Home = () => {
             Elite Esports connects a wide variety of people around the world.
             Join today to experience it yourself!
           </p>
-
           <div className='mt-8'>
             <Button>Play Now</Button>
+          </div>
+        </div>
+        <div className='relative w-full h-[30rem]'>
+          <div className='creator-card z-[2] transform translate-y-[4rem]'>
+            <img
+              src='https://imgur.com/rhRmasz.gif'
+              alt='Andrew Zhang and his brother'
+            />
+          </div>
+          <div className='creator-card z-[3] transform translate-x-[4rem] sm:translate-x-[16rem]'>
+            <img src={c9keeoh} className='max-w-sm' alt='C9Keeoh Stream' />
+          </div>
+          <div className='creator-card z-[1] bottom-0 transform translate-x-[6rem] sm:translate-x-[18rem]'>
+            <img src={spicalol} className='max-w-sm' alt='Spica Stream' />
           </div>
         </div>
       </div>
