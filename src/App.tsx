@@ -5,6 +5,11 @@ import Sources from '@/components/Sources'
 const App = () => {
   return (
     <>
+      <div className='fixed w-full z-50 bg-neutral-900'>
+        <div className='max-w-7xl mx-auto px-2 sm:px-6 text-white py-4'>
+          <h3 className='text-lg font-bold'>Elite Esports</h3>
+        </div>
+      </div>
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/sources' element={<Sources />}></Route>
