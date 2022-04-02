@@ -289,38 +289,36 @@ const Home = () => {
         </div>
         <div className='relative grid justify-items-center lg:justify-items-end w-full'>
           <div className='stack-2 max-w-md overflow-hidden rounded-sm'>
-            <img
-              className='w-full'
-              src={ eyes }
-              alt='Agent Eyes'
-            />
+            <img className='w-full' src={eyes} alt='Agent Eyes' />
           </div>
         </div>
       </div>
-
-      <div className='lg:grid lg:grid-cols-2 content gap-8'>
-        <div>
-          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
-            Fair //
-          </p>
-          <h1 className='relative text-4xl font-bold text-white'>
-            Adaptive And Competitive Bracket System
-          </h1>
-          <p className='mt-8 text-neutral-400'>
-            Our tournament brackets are always verified to be easy to use on
-            every platform, from mobile devices to television screens. Up to 128
-            teams are allowed to be viewed on an event. Each stage gives you the
-            most important information, such as score, date, and available VODs.
-            All prize pools and teams are listed below.
-          </p>
-        </div>
-        <div>
-          <div className='stack-2 overflow-hidden rounded-sm'>
-            <img
-              className='w-full'
-              src='https://www.dailyesports.gg/wp-content/uploads/2019/12/Clash-Bracket-League-of-Legends.png'
-              alt='Bracket system'
-            />
+      <div className='relative'>
+        <div className='absolute h-full w-full grid-background bg-[#ce0037] transform skew-y-6' />
+        <div className='relative lg:grid lg:grid-cols-2 content gap-8'>
+          <div>
+            <p className='absolute text-[#ce315b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+              Fair //
+            </p>
+            <h1 className='relative text-4xl font-bold text-white'>
+              Adaptive And Competitive Bracket System
+            </h1>
+            <p className='mt-8 text-neutral-200'>
+              Our tournament brackets are always verified to be easy to use on
+              every platform, from mobile devices to television screens. Up to
+              128 teams are allowed to be viewed on an event. Each stage gives
+              you the most important information, such as score, date, and
+              available VODs. All prize pools and teams are listed below.
+            </p>
+          </div>
+          <div>
+            <div className='overflow-hidden rounded-sm'>
+              <img
+                className='w-full'
+                src='https://www.dailyesports.gg/wp-content/uploads/2019/12/Clash-Bracket-League-of-Legends.png'
+                alt='Bracket system'
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -365,35 +363,38 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className='lg:grid lg:grid-cols-2 content gap-8'>
-        <div>
-          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
-            Community //
-          </p>
-          <h1 className='relative text-4xl font-bold text-white'>
-            Play With Popular Teams And Hundreds of Content Creators
-          </h1>
-          <p className='mt-8 text-neutral-400'>
-            Play with popular teams such as Team Liquid, Sentinels, and TSM.
-            Elite Esports connects a wide variety of people around the world.
-            Join today to experience it yourself!
-          </p>
-          <div className='mt-8'>
-            <Button>Play Now</Button>
+      <div className='relative'>
+        <div className='absolute h-full w-full grid-background bg-[#ce0037] transform skew-y-6' />
+        <div className='lg:grid lg:grid-cols-2 content gap-8'>
+          <div>
+            <p className='absolute text-[#ce315b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+              Community //
+            </p>
+            <h1 className='relative text-4xl font-bold text-white'>
+              Play With Popular Teams And Hundreds of Content Creators
+            </h1>
+            <p className='relative mt-8 z-[1] text-neutral-200'>
+              Play with popular teams such as Team Liquid, Sentinels, and TSM.
+              Elite Esports connects a wide variety of people around the world.
+              Join today to experience it yourself!
+            </p>
+            <div className='mt-8'>
+              <Button secondary>Play Now</Button>
+            </div>
           </div>
-        </div>
-        <div className='relative w-full h-[30rem]'>
-          <div className='creator-card z-[2] transform translate-y-[4rem]'>
-            <img
-              src='https://imgur.com/rhRmasz.gif'
-              alt='Andrew Zhang and his brother'
-            />
-          </div>
-          <div className='creator-card z-[3] transform translate-x-[4rem] sm:translate-x-[16rem]'>
-            <img src={c9keeoh} className='max-w-sm' alt='C9Keeoh Stream' />
-          </div>
-          <div className='creator-card z-[1] bottom-0 transform translate-x-[6rem] sm:translate-x-[18rem]'>
-            <img src={spicalol} className='max-w-sm' alt='Spica Stream' />
+          <div className='relative w-full h-[30rem]'>
+            <div className='creator-card z-[2] transform translate-y-[4rem]'>
+              <img
+                src='https://imgur.com/rhRmasz.gif'
+                alt='Andrew Zhang and his brother'
+              />
+            </div>
+            <div className='creator-card z-[3] transform translate-x-[4rem] sm:translate-x-[16rem]'>
+              <img src={c9keeoh} className='max-w-sm' alt='C9Keeoh Stream' />
+            </div>
+            <div className='creator-card z-[1] bottom-0 transform translate-x-[6rem] sm:translate-x-[18rem]'>
+              <img src={spicalol} className='max-w-sm' alt='Spica Stream' />
+            </div>
           </div>
         </div>
       </div>
