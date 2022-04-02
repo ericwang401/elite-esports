@@ -12,7 +12,10 @@ const ButtonStyle = styled.button<ButtonProps>`
     transform: skew(-10deg);
 
     ${({outlined, secondary}) => (!secondary && !outlined) && css`
-        background-color: #ce0037;
+        background-image: linear-gradient(to bottom, #eb1a52 0%, #ce0037 100%);
+        &:hover {
+            background-image: linear-gradient(to top, #eb1a52 0%, #ce0037 100%);
+        }
         ${tw`text-white`}
     `}
 

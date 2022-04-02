@@ -6,7 +6,33 @@ import valorantLogo from '@/assets/images/valorant-logo.png'
 import rocketLogo from '@/assets/images/rocket-logo.png'
 import csgoLogo from '@/assets/images/csgo-logo.png'
 
+import fifaLogo from '@/assets/images/fifa-logo.svg'
+import riotLogo from '@/assets/images/riot-logo.svg'
+import twitchLogo from '@/assets/images/twitch-logo.svg'
+import attLogo from '@/assets/images/att-logo.svg'
+import johnLogo from '@/assets/images/john-logo.svg'
+import microsoftLogo from '@/assets/images/microsoft-logo.svg'
+
 const Home = () => {
+  /*
+  const vidRef = useRef(null)
+  const [ videoPlaying, setVideoPlaying ] = useState(true)
+
+  const handlePlayVideo = () => {
+    if (videoPlaying) {
+      vidRef?.current.stop()
+    }
+  } */
+
+  const brands = [
+    fifaLogo,
+    riotLogo,
+    twitchLogo,
+    attLogo,
+    johnLogo,
+    microsoftLogo,
+  ]
+
   const winnersTestimonials = [
     {
       name: 'Albert Sheng',
@@ -19,11 +45,17 @@ const Home = () => {
       text: "I can't believe my eyes when my team won. I finally have enough money to travel around the world, and I'm looking forward to the next tournament!",
     },
     {
-      name: 'Wilkerson Schultz',
-      subtitle: 'Won $0 USD',
-      text: "wow!!!11! #@*(!&#!()@*&#! @!#**) you !@#)( you !@#()*!@# you ",
+      name: 'Micha Nash',
+      subtitle: 'Won A Big Scholarship',
+      text: "Thanks to Elite Esports. I won a full ride to Maryland University. It has always been my dream school and I can't wait to attend!",
+    },
+    {
+      name: 'Griffin Condley',
+      subtitle: 'Won $3,700',
+      text: 'Gaming has always been my passion. I enjoy League of Legends every day and Elite Esports has enabled me to take my passion further!',
     },
   ]
+
   return (
     <>
       <div className='bg-[#ce0037] grid-background relative'>
@@ -256,7 +288,7 @@ const Home = () => {
             prizes and gifts valued up to $20,000 USD. Check out what our
             winners say.
           </p>
-          <div className='grid grid-cols-4 gap-4'>
+          <div className='grid grid-cols-1 md:grid-cols-4 gap-4 mt-8'>
             {winnersTestimonials.map((testimonial) => (
               <div className='testimonial-card'>
                 <p>{testimonial.text}</p>
@@ -264,6 +296,20 @@ const Home = () => {
                   <p className='mt-6 font-bold'>{testimonial.name}</p>
                   <p>{testimonial.subtitle}</p>
                 </div>
+              </div>
+            ))}
+          </div>
+          <h3 className='font-bold text-3xl text-white text-center mt-8'>
+            Thanks To Our Amazing Sponsors
+          </h3>
+          <div className='grid grid-cols-1 md:grid-cols-6 gap-4 mt-8'>
+            {brands.map((brand) => (
+              <div className='grid place-items-center'>
+                <img
+                  src={brand}
+                  alt='Brand logo'
+                  className='max-w-[15rem] p-5 max-h-[5rem]'
+                />
               </div>
             ))}
           </div>
@@ -277,6 +323,15 @@ const Home = () => {
           <h1 className='relative text-4xl font-bold text-white'>
             Play With Popular Teams And Hundreds of Content Creators
           </h1>
+          <p className='mt-8 text-neutral-400'>
+            Play with popular teams such as Team Liquid, Sentinels, and TSM.
+            Elite Esports connects a wide variety of people around the world.
+            Join today to experience it yourself!
+          </p>
+
+          <div className='mt-8'>
+            <Button>Play Now</Button>
+          </div>
         </div>
       </div>
       <div className='lg:grid lg:grid-cols-2 content'>
