@@ -5,7 +5,6 @@ import leagueLogo from '@/assets/images/league-logo.png'
 import valorantLogo from '@/assets/images/valorant-logo.png'
 import rocketLogo from '@/assets/images/rocket-logo.png'
 import csgoLogo from '@/assets/images/csgo-logo.png'
-import { arrayBuffer } from 'stream/consumers'
 
 const Home = () => {
   const winnersTestimonials = [
