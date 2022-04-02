@@ -402,7 +402,7 @@ const Home = () => {
             <p className='relative mt-8 z-[1] text-neutral-200'>
               Play with popular teams such as Team Liquid, Sentinels, and TSM.
               Elite Esports connects a wide variety of people around the world.
-              Join today to experience it yourself!
+              Join today to play with your favorite creators!
             </p>
             <div className='mt-8'>
               <Button
