@@ -367,7 +367,7 @@ const Home = () => {
           <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-8'>
             {winnersTestimonials.map((testimonial) => (
               <div className='testimonial-card'>
-                <p className=''>{testimonial.text}</p>
+                <p className='text-neutral-200'>{testimonial.text}</p>
                 <div>
                   <p className='mt-6 font-bold'>{testimonial.name}</p>
                   <p>{testimonial.subtitle}</p>
