@@ -16,6 +16,8 @@ import microsoftLogo from '@/assets/images/microsoft-logo.svg'
 import c9keeoh from '@/assets/images/c9keeoh.gif'
 import spicalol from '@/assets/images/spicalol.gif'
 
+import eyes from '@/assets/images/eyes.png'
+
 const Home = () => {
   /*
   const vidRef = useRef(null)
@@ -49,7 +51,7 @@ const Home = () => {
     },
     {
       name: 'Micha Nash',
-      subtitle: 'Won A Big Scholarship',
+      subtitle: 'Won A Scholarship',
       text: "Thanks to Elite Esports. I won a full ride to Maryland University. It has always been my dream school and I can't wait to attend!",
     },
     {
@@ -69,12 +71,14 @@ const Home = () => {
     {
       title: 'February Tournament Cancelled',
       date: '02/03/22',
-      image: 'https://images.pond5.com/red-cancelled-stamp-animation-black-footage-136500183_iconl.jpeg',
+      image:
+        'https://images.pond5.com/red-cancelled-stamp-animation-black-footage-136500183_iconl.jpeg',
     },
     {
       title: '2022 Rosters Available',
       date: '01/25/22',
-      image: 'https://images.unsplash.com/photo-1624295059100-0ca889087b54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80'
+      image:
+        'https://images.unsplash.com/photo-1624295059100-0ca889087b54?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
     },
   ]
 
@@ -242,7 +246,7 @@ const Home = () => {
           </svg>
         </div>
       </div>
-      <div className='lg:grid lg:grid-cols-2 content relative'>
+      <div className='grid lg:grid-cols-2 content relative gap-8'>
         <div>
           <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
             Elite Esports //
@@ -283,23 +287,42 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div></div>
+        <div className='relative grid justify-items-center lg:justify-items-end w-full'>
+          <div className='stack-2 max-w-md overflow-hidden rounded-sm'>
+            <img
+              className='w-full'
+              src={ eyes }
+              alt='Agent Eyes'
+            />
+          </div>
+        </div>
       </div>
 
-      <div className='content'>
-        <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
-          Fair //
-        </p>
-        <h1 className='relative text-4xl font-bold text-white'>
-          Adaptive And Competitive Bracket System
-        </h1>
-        <p className='mt-8 text-neutral-400'>
-          Our tournament brackets are always verified to be easy to use on every
-          platform, from mobile devices to television screens. Up to 128 teams
-          are allowed to be viewed on an event. Each stage gives you the most
-          important information, such as score, date, and available VODs. All
-          prize pools and teams are listed below.
-        </p>
+      <div className='lg:grid lg:grid-cols-2 content gap-8'>
+        <div>
+          <p className='absolute text-[#1b1b1b] z-0 whitespace-nowrap transform translate-y-[-4.5rem] translate-x-[-9rem] font-bold text-[7rem] uppercase'>
+            Fair //
+          </p>
+          <h1 className='relative text-4xl font-bold text-white'>
+            Adaptive And Competitive Bracket System
+          </h1>
+          <p className='mt-8 text-neutral-400'>
+            Our tournament brackets are always verified to be easy to use on
+            every platform, from mobile devices to television screens. Up to 128
+            teams are allowed to be viewed on an event. Each stage gives you the
+            most important information, such as score, date, and available VODs.
+            All prize pools and teams are listed below.
+          </p>
+        </div>
+        <div>
+          <div className='stack-2 overflow-hidden rounded-sm'>
+            <img
+              className='w-full'
+              src='https://www.dailyesports.gg/wp-content/uploads/2019/12/Clash-Bracket-League-of-Legends.png'
+              alt='Bracket system'
+            />
+          </div>
+        </div>
       </div>
       <div className='content'>
         <div>
@@ -405,7 +428,8 @@ const Home = () => {
             Join Us //
           </p>
           <h1 className='relative text-7xl font-bold text-white'>
-            Register. <br /> Play.<br /> Win. <br /> Repeat.
+            Register. <br /> Play.
+            <br /> Win. <br /> Repeat.
           </h1>
         </div>
       </div>
