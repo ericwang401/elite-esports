@@ -343,7 +343,7 @@ const Home = () => {
             <div className='overflow-hidden rounded-sm'>
               <img
                 className='w-full'
-                src='https://www.dailyesports.gg/wp-content/uploads/2019/12/Clash-Bracket-League-of-Legends.png'
+                src='https://imgur.com/Aw3cWJQ.png'
                 alt='Bracket system'
               />
             </div>
